@@ -11,7 +11,7 @@ In the project directory, you can run:
 Runs the API<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.<br>
 Open [http://localhost:3000/explorer](http://localhost:3000/explorer) to open Swagger<br>
-Open [http://localhost:3000/visualize](http://localhost:3000/visualize) to open model relation visualize
+Open [http://localhost:3000/visualize](http://localhost:3000/visualize) to open model relational visualize
 
 The API will reload(by nodemon) if you make edits.<br>
 You will also see any lint errors in the console.
