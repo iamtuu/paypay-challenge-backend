@@ -1,0 +1,48 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node .",
+    "posttest": "npm run lint",
+    "dev": "nodemon -L --inspect=0.0.0.0:9229 .",
+    "ngrok": "ngrok http 3000"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.0.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.5.2",
+    "express-flash": "0.0.2",
+    "express-session": "^1.16.2",
+    "helmet": "^3.10.0",
+    "loopback": "^3.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.2.0",
+    "loopback-component-passport": "^3.11.0",
+    "loopback-component-visualizer": "^1.2.1",
+    "loopback-connector-postgresql": "^3.7.0",
+    "loopback-connector-rest": "^3.4.2",
+    "loopback-content-range": "^2.0.0",
+    "loopback3-xtotalcount": "^0.1.2",
+    "ngrok": "^3.2.5",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^3.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0",
+    "nodemon": "^1.19.1"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "backend"
+}

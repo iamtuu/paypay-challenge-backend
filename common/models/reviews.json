@@ -1,0 +1,33 @@
+{
+  "name": "Reviews",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "score": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviewer": {
+      "type": "belongsTo",
+      "model": "AppUser",
+      "foreignKey": "reviewerId"
+    },
+    "reviewee": {
+      "type": "belongsTo",
+      "model": "AppUser",
+      "foreignKey": "revieweeId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

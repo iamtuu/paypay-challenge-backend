@@ -1,0 +1,29 @@
+version: '3'
+services:
+  backend:
+    image: node:8-alpine
+    command: 'npm run dev'
+    working_dir: /app
+    volumes: 
+      - .:/app
+    ports:
+      - 3000:3000
+      - 9229:9229
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://backend:defaultPassword@postgresdb:5432/backend
+    links: 
+      - postgresdb:postgresdb
+  postgresdb:
+    image: postgres:10-alpine
+    environment: 
+      POSTGRES_USER: backend
+      POSTGRES_PASSWORD: defaultPassword
+      POSTGRES_DB: backend
+  ngrok:
+    image: wernight/ngrok
+    links: 
+      - backend:backend
+    ports:
+      - 4040:4040
+    command: ngrok http backend:3000
